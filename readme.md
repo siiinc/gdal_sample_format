@@ -1,4 +1,6 @@
 # Building
+See https://trac.osgeo.org/gdal/wiki/BuildingOnWindows
+
 
 ##Windows
  ___Aug 21/2015___ VC2013 works but 2015 has issues with some odbc linking issue missing exports so we are assuming VS2013
