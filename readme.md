@@ -1,14 +1,14 @@
 # Building
 
-#Windows
+##Windows
  ___Aug 21/2015___ VC2013 works but 2015 has issues with some odbc linking issue missing exports so we are assuming VS2013
-   ##Building x64
+ 
+####Building x64
    * start your VS2013 x64 Native Tools Command Prompt
    * goto <root>\gdal\gdal
    * `nmake /f makefile.vc MSVC_VER=1800 WIN64=YES install`
 
-     
- ## Dependancies
+#### Dependancies
  * www.boost.org
    1. download latest version [1_59_0 as of Aug21/2015](http://sourceforge.net/projects/boost/files/boost/1.59.0/)
    2. run ```bootstrap.bat```
@@ -20,7 +20,7 @@ b2.exe --stagedir=./stage/x64 --build-type=complete --layout=versioned variant=r
 b2.exe --stagedir=./stage/x32 --build-type=complete --layout=versioned variant=release link=static threading=multi toolset=msvc-12.0 stage
    </pre>
  
- ## Adding new driver (using mdf as example)
+#### Adding new driver (using mdf as example)
  * add code to <root>\gdal\gdal\frmts\mdf
      <pre>
  ├───mdf
@@ -53,3 +53,4 @@ b2.exe --stagedir=./stage/x32 --build-type=complete --layout=versioned variant=r
          GDALRegister_MDF();
      #endif
      </pre>
+   * follow the steps as in ___Building x64___
